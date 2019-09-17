@@ -10,4 +10,4 @@ sau đây là giao diện khi vào trang web:
 <img src="https://www.upsieutoc.com/images/2019/09/17/cancau.png" alt="cancau.png" border="0" />
 -hỗ Trợ:
 <img src="https://www.upsieutoc.com/images/2019/09/17/hotro.png" alt="hotro.png" border="0" />
-Trang web vẫn đang còn thiếu mục giỏ hàng,em  sẽ cố gắng  cập nhật trong thời gian sớm nhất.
+Trang web vẫn đang còn thiếu mục giỏ hàng và mục mua bán ,em  sẽ cố gắng  cập nhật trong thời gian sớm nhất.
