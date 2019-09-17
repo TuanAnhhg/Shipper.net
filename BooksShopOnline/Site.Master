@@ -1,0 +1,103 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="BooksShopOnline.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> -Books Shop Online</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <style type="text/css">
+        .auto-style1 {
+            width: 260px;
+            height: 99px;
+        }
+        .navbar-header {
+            height: 114px;
+        }
+        .auto-style2 {
+            font-size: x-large;
+            color: #993333;
+        }
+        .auto-style3 {
+            color: #993333;
+        }
+    </style>
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    &nbsp;<img alt="" class="auto-style1" src="Images/49204526_287523281907454_1286121522926190592_n.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><span class="auto-style3">&nbsp;</span><asp:HyperLink ID="HyperLink1" runat="server" CssClass="auto-style2" NavigateUrl="~/Default.aspx">Trang chủ</asp:HyperLink>
+                    </strong><span class="auto-style2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><strong>
+                    <asp:HyperLink ID="HyperLink2" runat="server" CssClass="auto-style2" NavigateUrl="~/BookList.aspx">Hàng Hóa</asp:HyperLink>
+                    </strong><span class="auto-style2"><strong>&nbsp;&nbsp;&nbsp; </strong></span><strong>
+                    <asp:HyperLink ID="HyperLink3" runat="server" CssClass="auto-style2" NavigateUrl="~/BookDetails.aspx">Mua Bán</asp:HyperLink>
+                    </strong><span class="auto-style2"><strong>&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><strong>
+                    <asp:HyperLink ID="HyperLink4" runat="server" CssClass="auto-style2" NavigateUrl="~/Contact.aspx">Hỗ Trợ</asp:HyperLink>
+                    </strong>
+                </div>
+            </div>
+        </div>
+         <!--***********************-->
+                <div id="CategoryMenu" style="text-align: center">
+         <asp:ListView ID="categoryList"
+        ItemType="BooksShopOnline.Models.Category" runat="server"
+        SelectMethod="GetCategories" >
+         <ItemTemplate>
+         <b style="font-size: large; font-style: normal">
+         <a href="/BookList.aspx?id=<%#: Item.CategoryID %>">
+         <%#: Item.CategoryName %>
+         </a>
+         </b>
+         </ItemTemplate>
+         <ItemSeparatorTemplate> | </ItemSeparatorTemplate>
+         </asp:ListView>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - Books Shop Online</p>
+            </footer>
+        </div>
+
+    </form>
+</body>
+</html>
