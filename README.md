@@ -14,8 +14,7 @@ sau đây là giao diện khi vào trang web:
 -Hàng hóa:các hàng hóa sẽ được tổng hợp tại trang này
 <img src="https://www.upsieutoc.com/images/2019/09/17/hanghoa.png" alt="hanghoa.png" border="0" />
 hàng hóa(update thêm phần giỏ hàng):
-<img src="https://www.upsieutoc.com/images/2019/09/17/cancau.png" alt="cancau.png" border="0" />
-<img src="https://www.upsieutoc.com/images/2019/10/15/hang.png" alt="hang.png" border="0" />=>sau khi thêm
+<img src="https://www.upsieutoc.com/images/2019/10/15/hang.png" alt="hang.png" border="0" />
 -Giỏ hàng: khi nhấp vào sản sản phẩm trang web sẽ đưa bạn đến phần giới thiệu chi tiết sản phẩm
 <img src="https://www.upsieutoc.com/images/2019/10/15/giohang.png" alt="giohang.png" border="0" />
 -hỗ Trợ:
